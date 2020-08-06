@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<br /><br /><br /><br />
+<div class="row">
+    <div class="tab">
+        <font style="color:yellow;font-family:Castellar">
+            <div class="text-center">
+                <h1> BMI Form </h1>
+            </div>
+            <div class="col-md-3">
+
+
+                <form asp-controller="Bmi" asp-action="ReadForm" method="post">
+
+                    <!--<input type="hidden" asp-for="ID" />-->
+
+                    <div class="form-group">
+                        <label class="control-label">WEIGHT</label>
+                        <input name="weight" class="form-control" />
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label name="height" class="control-label">HEIGHT</label>
+                        <input name="height" class="form-control" />
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+
+                </form>
+                </div>
+        </font>
+    </div>
+</div>

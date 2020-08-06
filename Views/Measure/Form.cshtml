@@ -1,0 +1,68 @@
+﻿@model WebCalc.Models.Measure
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<div class="row">
+    <div class="tab">
+        <font style="color:yellow;font-family:Castellar">
+            <div class="text-center">
+                <h1> BF Form</h1> 
+            </div>
+            <div class="col-md-3">
+
+             
+
+                <form asp-controller="Measure" asp-action="ReadForm" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <!--<input type="hidden" asp-for="ID" />-->
+
+                    <div class="form-group">
+                        <label asp-for="Age" class="control-label"></label>
+                        <input asp-for="Age" class="form-control" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Height" class="control-label"></label>
+                        <input asp-for="Height" class="form-control" />
+                        <span asp-validation-for="Height" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Weight" class="control-label"></label>
+                        <input asp-for="Weight" class="form-control" />
+                        <span asp-validation-for="Weight" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Neck" class="control-label"></label>
+                        <input asp-for="Neck" class="form-control" />
+                        <span asp-validation-for="Neck" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Waist" class="control-label"></label>
+                        <input asp-for="Waist" class="form-control" />
+                        <span asp-validation-for="Waist" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Wrist" class="control-label"></label>
+                        <input asp-for="Wrist" class="form-control" />
+                        <span asp-validation-for="Wrist" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Belt" class="control-label"></label>
+                        <input asp-for="Belt" class="form-control" />
+                        <span asp-validation-for="Belt" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+
+                </form>
+                </div>
+</font>
+    </div>
+</div>
