@@ -14,17 +14,25 @@
                 @Html.Label("Your BF:") @ViewBag.BF %  <br /> +/- 3% <br />
                 @if (ViewBag.sex == "Male")
                 {
-                    if (@ViewBag.BF > 0 && @ViewBag.BF < 7.5)@Html.Label("Niestety posiadasz zbyt mało tkanki tłuszczowej! Zalecamy stosowanie diety oraz trening siłowy ;)")
-                    if (@ViewBag.BF >= 7.5 && @ViewBag.BF < 20)@Html.Label("Gratulacje posiadasz prawidlową ilosc tkanki tłuszcowej! Oby tak dalej ;)")
-                    if (@ViewBag.BF >= 20 && @ViewBag.BF < 31)@Html.Label("Lekka nadwaga! Posiadasz zbyt dużo tkanki tłuszczowej! Zalecamy więcej ruchu")
-                    if (@ViewBag.BF >= 31 && @ViewBag.BF < 50) @Html.Label("Niestety posiadasz za dużo tkanki tłuszczowej! Zalecamy diete oraz treningi cardio, Powodzenia ;)")
+                    if (@ViewBag.BF > 0 && @ViewBag.BF < 7.5)
+                        @Html.Label("Niestety posiadasz zbyt mało tkanki tłuszczowej! Zalecamy stosowanie diety oraz trening siłowy ;)")
+                    if (@ViewBag.BF >= 7.5 && @ViewBag.BF < 20)
+                        @Html.Label("Gratulacje posiadasz prawidlową ilosc tkanki tłuszcowej! Oby tak dalej ;)")
+                    if (@ViewBag.BF >= 20 && @ViewBag.BF < 31)
+                        @Html.Label("Lekka nadwaga! Posiadasz zbyt dużo tkanki tłuszczowej! Zalecamy więcej ruchu")
+                    if (@ViewBag.BF >= 31 && @ViewBag.BF < 50) 
+                        @Html.Label("Niestety posiadasz za dużo tkanki tłuszczowej! Zalecamy diete oraz treningi cardio, Powodzenia ;)")
                 }
                 else
                 {
-                    if (@ViewBag.BF > 0 && @ViewBag.BF < 21)@Html.Label("Niestety posiadasz zbyt mało tkanki tłuszczowej! Zalecamy stosowanie diety oraz trening siłowy ;)")
-                    if (@ViewBag.BF >= 21 && @ViewBag.BF < 33)@Html.Label("Gratulacje posiadasz prawidlową ilosc tkanki tłuszcowej! Oby tak dalej ;)")
-                    if (@ViewBag.BF >= 33 && @ViewBag.BF < 40)@Html.Label("Lekka nadwaga! Posiadasz zbyt dużo tkanki tłuszczowej! Zalecamy więcej ruchu")
-                    if (@ViewBag.BF >= 40 && @ViewBag.BF < 50) @Html.Label("Niestety posiadasz za dużo tkanki tłuszczowej! Zalecamy diete oraz treningi cardio, Powodzenia ;)")
+                    if (@ViewBag.BF > 0 && @ViewBag.BF < 21)
+                        @Html.Label("Niestety posiadasz zbyt mało tkanki tłuszczowej! Zalecamy stosowanie diety oraz trening siłowy ;)")
+                    if (@ViewBag.BF >= 21 && @ViewBag.BF < 33)
+                        @Html.Label("Gratulacje posiadasz prawidlową ilosc tkanki tłuszcowej! Oby tak dalej ;)")
+                    if (@ViewBag.BF >= 33 && @ViewBag.BF < 40)
+                        @Html.Label("Lekka nadwaga! Posiadasz zbyt dużo tkanki tłuszczowej! Zalecamy więcej ruchu")
+                    if (@ViewBag.BF >= 40 && @ViewBag.BF < 50) 
+                        @Html.Label("Niestety posiadasz za dużo tkanki tłuszczowej! Zalecamy diete oraz treningi cardio, Powodzenia ;)")
                 }
 
             </p>

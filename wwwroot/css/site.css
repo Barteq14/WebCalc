@@ -76,7 +76,7 @@ body {
     background-image: url("https://s1.1zoom.me/big0/303/Apples_Bananas_Dumbbells_Plate_White_background_582028_1280x854.jpg");
     background-attachment: fixed;
     width: 100%;
-    height: 2000px;
+    height: 1000px;
     float:left;
     margin-right:40%;
 }
@@ -102,4 +102,38 @@ body {
     opacity: 0.9;
     background-color: white;
     border-radius: 20px;
+}
+
+#blok {
+    width: 600px;
+    height: 2.2em;
+    line-height: 2.2em;
+    margin: 0 auto;
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+    #blok > p {
+        margin: 0;
+        white-space: nowrap;
+        animation: przesun 10s linear infinite;
+    }
+@keyframes przesun {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.menu{
+    margin-top:50px;
+    margin-left:20px;
+    float:left;
+    width:12%;
+    height:500px;
+    border:solid;
+    background-color:red;
 }

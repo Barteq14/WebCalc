@@ -14,6 +14,7 @@ namespace WebCalc.Controllers
         private readonly WebCalcContext _context;
         public static double resultBF;
         public static string sexx;
+        public static int age;
         public MeasureController(WebCalcContext context)
         {
             _context = context;
@@ -22,10 +23,11 @@ namespace WebCalc.Controllers
         public IActionResult Index(double bf)
         {
             bf = resultBF;
-            ViewBag.BF = bf;
+            double bf2 = Math.Round(bf, 2);
+            ViewBag.BF = bf2;
             var query = _context.Measures.Select(m => m);
-            string s = sexx;
-            ViewBag.sex = s;
+            ViewBag.sex = sexx;
+            ViewBag.age = age;
             return View();
         }
         //GET/Form
@@ -49,6 +51,7 @@ namespace WebCalc.Controllers
                 e = measure.Weight * 2.2;
                 resultBF = d / e * 100;
                  sexx = "Male";
+                age = measure.Age;
 
             }
             else
@@ -60,6 +63,7 @@ namespace WebCalc.Controllers
                 e = measure.Weight * 2.2;
                 resultBF = d / e * 100;
                  sexx = "Female";
+                age = measure.Age;
             }
 
            

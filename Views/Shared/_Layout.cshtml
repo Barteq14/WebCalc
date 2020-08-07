@@ -13,42 +13,57 @@
 
             <div class="container">
 
-                <a class="navbar-brand" asp-area="" asp-controller="Bmi" asp-action="Form">My WebCalc</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Bmi" asp-action="Form">My SportWebCalc</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                   <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                       <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
 
-                           <li class="nav-item">
-                               <form asp-controller="Bmi" asp-action="Form" method="post">
-                                   <input type="submit" value="BMI calc" class="btn btn-primary" />
-                               </form>
-                           </li>
-                           &nbsp;&nbsp;
-                        
-                           <li class="nav-item">
-                               <form asp-controller="Measure" asp-action="Form" method="post">
-                                   <input type="submit" value="BF calc" class="btn btn-primary" />
-                               </form>
-                           </li>
-                           &nbsp;&nbsp;
-                      
-                           
-                           <li class="nav-item">
-                               <form asp-controller="Bmr" asp-action="Form" method="post">
-                                   <input type="submit" value="BMR calc" class="btn btn-primary" />
-                               </form>
-                           </li>
+                        <li class="nav-item">
+                            <form asp-controller="Bmi" asp-action="Form" method="post">
+                                <input type="submit" value="BMI calc" class="btn btn-primary" />
+                            </form>
+                        </li>
+                        &nbsp;&nbsp;
 
-                       </ul>
-                    </div>
+                        <li class="nav-item">
+                            <form asp-controller="Measure" asp-action="Form" method="post">
+                                <input type="submit" value="BF calc" class="btn btn-primary" />
+                            </form>
+                        </li>
+                        &nbsp;&nbsp;
+
+
+                        <li class="nav-item">
+                            <form asp-controller="Bmr" asp-action="Form" method="post">
+                                <input type="submit" value="BMR calc" class="btn btn-primary" />
+                            </form>
+                        </li>
+                        &nbsp;&nbsp; &nbsp;&nbsp;
+                        <div id="blok">
+                            <p>Zadbaj o swoje ciało. Sprawdź poszczególne wskaźniki na naszej stronie!</p>
+                        </div>
+                    </ul>
+                </div>
             </div>
 
         </nav>
     </header>
     <div class="body2">
+        <div class="menu">
+            <br /><br />
+            <font color="White" size="9">WebCalc!</font>  <br /><br />
+            <font color="white" size="4"> NAJLEPSZY kalkulator dla każdego sportowca </font><br />
+        
+            <img class="nature" width="100%" src="https://e.allegroimg.com/s512/01b7dc/6e4f4a6042428da9f912dbee566e/CENTYMETR-krawiecki-MIARA-krawiecka-150-cm" />
+            <img class="nature" width="100%" src="https://kacperchmielowiec.pl/wp-content/uploads/2015/01/silna-wola.jpg" />
+            <img class="nature" width="100%" src="https://zasoby.ekologia.pl/artykulyNew/11028/xxl/shutterstock-624180923_800x600.jpg" />
+            <img class="nature" width="100%" src="https://image.ceneostatic.pl/data/products/16294009/i-umiesniony-mezczyzna-plakat.jpg" />
+            <img class="nature" width="100%" src="https://i.pinimg.com/736x/e0/05/c4/e005c46af840e33e8d9bf0ff2785a53f.jpg" />
+        
+        </div>
         <div class="container">
             <main role="main" class="pb-3">
 
@@ -56,16 +71,22 @@
 
             </main>
         </div>
-        </div>
+    </div>
 
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2020 - WebCalc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @RenderSection("Scripts", required: false)
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - WebCalc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+    <script>
+        w3.slideshow(".nature", 2000);
+    </script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
