@@ -3,37 +3,66 @@
 *@
 @{
 }
-<br /><br /><br /><br />
-<div class="row">
-    <div class="tab">
-        <font style="color:yellow;font-family:Castellar">
-            <div class="text-center">
-                <h1> BMI Form </h1>
-            </div>
-            <div class="col-md-3">
+<br />
+
+                  <div class="row">
+                      <hr />
+                      <div class="tab" style="opacity:0.9">
+                          <font style="color:white;font-family:Arial">
+                              <div class="text-center">
+                                  <h1> BMI Form </h1>
+                              </div>
+                              <div class="col-md-3" style="width:50%;float:left">
 
 
-                <form asp-controller="Bmi" asp-action="ReadForm" method="post">
+                                  <form asp-controller="Bmi" asp-action="ReadForm" method="post">
 
-                    <!--<input type="hidden" asp-for="ID" />-->
+                                      <!--<input type="hidden" asp-for="ID" />-->
+                                  
+                                      <div class="form-group">
+                                          <label class="control-label">WEIGHT</label>
+                                          <input name="weight" class="form-control" />
+                                          <span class="text-danger"></span>
+                                      </div>
 
-                    <div class="form-group">
-                        <label class="control-label">WEIGHT</label>
-                        <input name="weight" class="form-control" />
-                        <span class="text-danger"></span>
-                    </div>
+                                      <div class="form-group">
+                                          <label name="height" class="control-label">HEIGHT</label>
+                                          <input name="height" class="form-control" />
+                                          <span class="text-danger"></span>
+                                      </div>
+                                      <div class="form-group">
+                                          <input type="submit" value="Save" class="btn btn-primary" />
+                                      </div>
 
-                    <div class="form-group">
-                        <label name="height" class="control-label">HEIGHT</label>
-                        <input name="height" class="form-control" />
-                        <span class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Save" class="btn btn-primary" />
-                    </div>
+                                  </form>
+                              </div>
+                              <div class="info">
 
-                </form>
-                </div>
-        </font>
-    </div>
-</div>
+                                  Kalkulator BMI (Body Mass Index) daje każdemu możliwość szybkiego i wygodego obliczenia własnego wskaźnika masy ciała.
+                                  BMI obliczamy dzieląc masę ciała (w kilogramach) przez wzrost do kwadratu (w metrach). Wskaźnik ten wykorzystywany jest przede
+                                  wszystkim do oceny ryzyka pojawienia się groźnych chorób: miażdżycy, choroby niedokrwiennej serca, udaru mózgu,
+                                  czy nawet nowotworów. Większość tych chorób jest związana z otyłością i dlatego kalkulator BMI to tak przydatne narzędzie. <br /><br />
+                                  BMI to najczęściej wykorzystywany wskaźnik właściwej masy ciała. Przedstawia on zakresy niedowagi, wagi prawidłowej, nadwagi i otyłości. Liczymy go według wzoru:
+                                  <br />
+                                  BMI=masa ciała [kg] / wzrost [m]2 (sprawdź swoje BMI w kalkulatorze)
+                                  <br />
+                                  Przedziały BMI wyglądają następująco:
+                                  <br /><br />
+                                  niedowaga: BMI < 18,5<br />
+                                  waga prawidłowa: BMI 18,5-24,9<br />
+                                  nadwaga I stopnia: BMI 25-26,9<br />
+                                  nadwaga II stopnia: BMI 27-29,9<br />
+                                  otyłość I stopnia: BMI 30-34,9<br />
+                                  otyłość II stopnia: BMI 35-39,9<br />
+                                  otyłość III stopnia (śmiertelna): BMI 40-49,9<br />
+                                  otyłość IV stopnia (skrajna) BMI > 50<br /><br />
+                                  Jeśli Twój wskaźnik BMI zawiera się w zakresie 18,5-24,9, oznacza to właściwą masę ciała. <br />
+                                  Więcej informacji znajdziesz pod tym linkiem:
+                                  <a style="color:yellow" href="https://bmi-online.pl/">bmi-online.pl</a> ,
+                                  <a style="color:yellow" href="https://www.poradnikzdrowie.pl/sprawdz-sie/kalkulatory/kalkulator-wagi-bmi-aa-4Q8M-4h3E-dtKD.html">poradnikzdrowie.pl</a> <br />
+                                  
+                              </div>
+                          </font>
+                      </div><br />
+                    
+                  </div>

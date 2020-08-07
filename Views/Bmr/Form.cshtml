@@ -5,22 +5,25 @@
 }
 
 <br />
-<br />
-<br />
-<br />
+
+
+
 <div class="row">
-    <div class="tab">
-        <font style="color:yellow;font-family:Castellar">
+    <div class="tab" style="opacity:0.9">
+        <font style="color:white;font-family:Arial">
             <div class="text-center">
                 <h1> BMR Form </h1>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="width:50%;float:left">
 
 
-                <form asp-controller="Bmr" asp-action="ReadForm" method="post" >
+                <form asp-controller="Bmr" asp-action="ReadForm" method="post">
 
                     <!--<input type="hidden" asp-for="ID" />-->
-
+                    <div class="form-group">
+                        Male <input type="radio" id="M" name="sex" value="Male" checked /><br />
+                        Female <input type="radio" id="F" name="sex" value="Female" />
+                    </div>
                     <div class="form-group">
                         <label class="control-label">WEIGHT</label>
                         <input name="weight" class="form-control" />
@@ -44,6 +47,31 @@
 
                 </form>
             </div>
+            <div class="info">
+                Kalkulator BMR (Basal Metabolic Rate) jest specjalnym wskaźnikiem wykorzystywanym przy obliczeniu minimalnego dziennego zapotrzebowania kalorycznego.
+                Do obliczeń wykorzystywane są indywidualne dane, w tym waga, wzrost, wiek oraz płeć. <br /><br />
+                Aby wstępnie oszacować zapotrzebowanie kaloryczne dorosłego człowieka, wystarczy pomnożyć masę ciała przez 24 (wartość odnosząca się do doby).
+                Przykładowo, osoba ważąca 60 kg potrzebuje około 1440 kcal dziennie. Niestety już na pierwszy rzut oka widać,
+                że wynik jest mało dokładny – wszak dwie osoby, ważące tyle samo, mogą mieć odmienne zapotrzebowanie na kalorie.
+                Licząc wskaźnik BMR, należy uwzględnić indywidualne predyspozycje osobnicze, m.in. wzrost, wiek i płeć. Uzyskanie precyzyjnych wartości wymaga
+                zastosowania wzoru Mifflina-St Jeora. <br /><br />
+                Zapotrzebowanie kaloryczne - wzór dla kobiet:<br />
+
+                BMR = (9,99 x waga) + (6,25 x wzrost) – (4,92 x wiek) – 161<br /><br />
+
+                Zapotrzebowanie kaloryczne wzór dla mężczyzn:<br />
+
+                BMR = (9,99 x waga) + (6,25 x wzrost) – (4,92 x wiek) + 5<br /><br />
+
+                Wzrost – [cm]<br />
+
+                Waga – [kg] <br />
+                
+                Więcej informacji znajdziesz pod tym linkiem:
+                <a style="color:yellow" href="https://www.medonet.pl/zdrowie,kalkulator-bmr---czym-jest-zapotrzebowanie-kaloryczne--co-moze-miec-wplyw-na-wynik-,artykul,1724924.html">medonet.pl</a> 
+
+            </div>
         </font>
     </div>
+    
 </div>

@@ -8,19 +8,22 @@
 
 
 <div class="row">
-    <div class="tab">
-        <font style="color:yellow;font-family:Castellar">
+    <div class="tab" style="opacity:0.9">
+        <font style="color:white;font-family:Arial">
             <div class="text-center">
-                <h1> BF Form</h1> 
+                <h1> BF Form</h1>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" style="width:50%;float:left">
 
-             
+
 
                 <form asp-controller="Measure" asp-action="ReadForm" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <!--<input type="hidden" asp-for="ID" />-->
-
+                    <div class="form-group">
+                        Male <input type="radio" id="M" name="sex" value="Male" checked /><br />
+                        Female <input type="radio" id="F" name="sex" value="Female" />
+                    </div>
                     <div class="form-group">
                         <label asp-for="Age" class="control-label"></label>
                         <input asp-for="Age" class="form-control" />
@@ -62,7 +65,37 @@
                     </div>
 
                 </form>
-                </div>
-</font>
+            </div>
+            <div class="info">
+                Wskaźnik określający procentowy udział tkanki tłuszczowej w ciele ma za zadanie ukazać, ile procent w całej masie ciała stanowi tłuszcz.
+                Jest to istotny element, który nadaje się do tego, aby miarodajnie kontrolować postępy odchudzania, jak i to, czy nadwyżka kaloryczna
+                podczas budowania masy nie jest zbyt wysoka. Co więcej, poziom tkanki tłuszczowej w ciele, jest w stanie określić również stan naszego
+                metabolizmu. Posiadając BF w granicach 15% dla mężczyzn i 25% dla kobiet, można wnioskować, że dana osoba ma predyspozycje do mniejszej
+                wrażliwości na działanie insuliny, co będzie dodatkowo sprzyjało tyciu. Wskaźnik procentowej zawartości tłuszczu jest powszechnie
+                wykorzystywanym narzędziem przez dietetyków, jak i trenerów personalnych.<br /><br />
+                Zawartość tkanki tłuszczowej w organizmie (BF %) można obliczyć za pomocą wielu metod. Niektóre z nich dla wielu nie będą nigdy dostępne, ponieważ wymagają albo dostępu do
+                specjalistycznego sprzętu pomiarowego albo umiejętności wykorzystywania bardzo skomplikowanych wzorów antropometrycznych. Ze wszystkich metod,
+                które zostały stworzone i opracowane, począwszy od pomiarów fałd skórno – mięśniowych aż po metody wykorzystujące impuls bioelektryczny,
+                nieskomplikowaną i skuteczną metodą jest YMCA, która właśnie określa poziom tkanki tłuszczowej w organizmie. Metoda YMCA jest prosta z tego
+                względu, ponieważ wykorzystuję tylko dwie zmienne: obwód pasa (talii) oraz masę ciała. Wiele osób, które nie mają dostępu do specjalistycznego
+                sprzętu badającego zawartość tkanki tłuszczowej w organizmie, jest skazana na niewiedzę. A przecież poziom tkanki tłuszczowej jest wskaźnikiem,
+                który można wykorzystywać w rejestrowaniu zmian w organizmie podczas prowadzenia diety lub dawkowania wzmożonej aktywności ruchowej. <br /><br />
+                Dla ułatwienia wzór został rozbity na 6 części, które mają za zadanie ułatwić uzyskanie prawidłowego wyniku.<br />
+
+                Krok nr 1: oblicz „a” a = 4,15* obwód pasa (talii) a = 4,15 * 100 cm a = 415<br />
+                Krok nr 2 oblicz „b” b = a / 2,54 b = 415 / 2,54 b= 163,38<br />
+                Krok nr 3 oblicz „c” c = 0,082 * masa ciała * 2,2 c = 0,082 * 80 kg * 2,2 c= 14,43<br />
+                Krok nr 4 oblicz „d” d = b – c – 98,42 (dla kobiet b – c - 76,76 ) d = 163,38 - 14,43 - 98,42 d= 50,53<br />
+                Krok nr 5 oblicz „e” e = masa ciała * 2,2 e = 80 kg * 2,2 e= 176<br />
+                Krok nr 6 oblicz „wynik” Wynik = d/e * 100 Wynik = 50,53/176 * 100 Wynik= 28,71% +/- ~3 %<br />
+                Uzyskany wynik to procentowa zawartość tkanki tłuszczowej w organizmie (BF %), który należy uznawać za rzetelny. <br />
+                Więcej informacji znajdziesz pod tym linkiem:
+                <a style="color:yellow" href="https://potreningu.pl/calculators/bf">potreningu.pl</a> ,
+                <a style="color:yellow" href="https://www.trener.pl/trener-odpowiada/jak-obliczyc-zawartosc-tkanki-tluszczowej-w-organizmie/">trener.pl</a> <br />
+
+
+            </div>
+        </font>
     </div>
+
 </div>

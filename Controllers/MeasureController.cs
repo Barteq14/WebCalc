@@ -13,6 +13,7 @@ namespace WebCalc.Controllers
     {
         private readonly WebCalcContext _context;
         public static double resultBF;
+        public static string sexx;
         public MeasureController(WebCalcContext context)
         {
             _context = context;
@@ -23,17 +24,9 @@ namespace WebCalc.Controllers
             bf = resultBF;
             ViewBag.BF = bf;
             var query = _context.Measures.Select(m => m);
-            List<Measure> measure = new List<Measure>();
-            foreach(var item in query)
-            {
-                measure.Add(item);
-            }
-            if(query == null)
-            {
-                ViewBag.error = "nic nie ma w bazie danych";
-                return View(ViewBag.error);
-            }
-            return View(measure);
+            string s = sexx;
+            ViewBag.sex = s;
+            return View();
         }
         //GET/Form
         public IActionResult Form()
@@ -45,18 +38,31 @@ namespace WebCalc.Controllers
         [HttpPost]
         public IActionResult ReadForm(Measure measure)
         {
-            double a, b, c, d, d2, e;
+            double a, b, c, d, e;
 
-            a = 4.15 * measure.Belt;
-            b = a / 2.54;
-            c = 0.082 * measure.Weight * 2.2;
-            d = b - c - 98.42;
-            d2 = b - c - 76.76;
-            e = measure.Weight * 2.2;
-            resultBF = d / e * 100;
- 
-            //result +/- 3%
+            if (Request.Form["sex"] == "Male")
+            {
+                a = 4.15 * measure.Belt;
+                b = a / 2.54;
+                c = 0.082 * measure.Weight * 2.2;
+                d = b - c - 98.42;
+                e = measure.Weight * 2.2;
+                resultBF = d / e * 100;
+                 sexx = "Male";
 
+            }
+            else
+            {
+                a = 4.15 * measure.Belt;
+                b = a / 2.54;
+                c = 0.082 * measure.Weight * 2.2;
+                d = b - c - 76.76;
+                e = measure.Weight * 2.2;
+                resultBF = d / e * 100;
+                 sexx = "Female";
+            }
+
+           
 
             measure.Date = DateTime.Now;
             measure.ATime = DateTime.Now; 
@@ -68,18 +74,5 @@ namespace WebCalc.Controllers
             
             return RedirectToAction("Index",resultBF);
         }
-
-        public IActionResult Shutdown()
-        {
-            var query = _context.Measures.Select(m => m);
-            foreach(var item in query)
-            {
-                _context.Remove(item);
-            }
-
-            _context.SaveChanges();
-            return RedirectToAction("Index","Bmi");
-        }
-     
     }
 }

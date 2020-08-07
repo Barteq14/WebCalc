@@ -38,6 +38,7 @@ namespace WebCalc.Controllers
         [HttpPost]
         public IActionResult ReadForm(double weight, double height)
         {
+           
             ViewBag.w = weight;
             ViewBag.h = height/100;
             double height2 = Math.Pow(height, 2);

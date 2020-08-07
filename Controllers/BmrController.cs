@@ -11,6 +11,7 @@ namespace WebCalc.Controllers
     {
         private readonly WebCalcContext _context;
         public static double bmr;
+        public static string sexx;
         public BmrController(WebCalcContext context)
         {
             _context = context;
@@ -19,6 +20,8 @@ namespace WebCalc.Controllers
         {
             bmr2 = bmr;
             ViewBag.BMR = bmr2;
+            ViewBag.sex = sexx;
+            ViewBag.inf = " kcal dziennie.";
             return View();
         }
 
@@ -29,7 +32,17 @@ namespace WebCalc.Controllers
         [HttpPost]
         public IActionResult ReadForm(double weight, double height, int age)
         {
-            bmr = 66 + (13.7 * weight) + (5 * height) - (6.76 * age);
+            if(Request.Form["sex"] == "Male")
+            {
+                bmr = 66 + (13.7 * weight) + (5 * height) - (6.76 * age);
+                sexx = "Male";
+            }
+            else
+            {
+                bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+                sexx = "Female";
+            }
+            
            
             return RedirectToAction("Index",bmr);
         }
